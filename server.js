@@ -8,15 +8,16 @@ app.use(express.static(__dirname + "/client"));
 app.use('/angular', express.static(__dirname+'/node_modules/angular'));
 app.use('/angular-route', express.static(__dirname+'/node_modules/angular-route'));
 
-app.get("/movies", (req, res, next) => {
+app.get("/test", (req, res, next) => {
   movieApi
     .search(
-      { title: req.query.keyword },
+      { title: 'The Thing' },
       { apiKey: require("./server/key").key }
     )
     .then(movieData => {
-      console.log(movieData);
-    });
+      res.status(200).json(movieData);
+    })
+    .catch(err => console.log(err));
   res.end();
 });
 
