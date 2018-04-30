@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/nss-day-cohort-23/bob-ross-sprint#readme",
   "dependencies": {
+    "angular": "^1.6.10",
+    "angular-route": "^1.6.10",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "concurrently": "^3.5.1",
