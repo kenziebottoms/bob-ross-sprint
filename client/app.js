@@ -6,5 +6,13 @@ angular.module('bobross', ['ngRoute'])
       .when('/movies/:q', {
         templateUrl: 'partials/movies.html',
         controller: 'MovieCtrl'
+      })
+      .when('/register', {
+        templateUrl: 'partials/register.html',
+        controller: 'RegisterCtrl'
+      })
+      .when('/login', {
+        templateUrl: 'partials/login.html',
+        controller: 'LoginCtrl'
       });
   });
