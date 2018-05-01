@@ -1,5 +1,10 @@
-<h2>Movies</h2>
-<h4>Search results for '{{search}}'</h4>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" ng-model='term' placeholder="Search movies" aria-label="Search movies" ng-enter='search()'>
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" ng-click='search()'>Search</button>
+  </div>
+</div>
+<h4 ng-show='movies'>Search results for '{{searchTerm}}'</h4>
 <div id='movies' class='my-3'>
   <div ng-repeat='movie in movies' class='card movie bb'>
     <img ng-src="{{movie.poster}}" class='card-img-top mx-0 bb'>

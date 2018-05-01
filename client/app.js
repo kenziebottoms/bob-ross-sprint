@@ -3,7 +3,7 @@
 angular.module('bobross', ['ngRoute'])
   .config($routeProvider => {
     $routeProvider
-      .when('/movies/:q', {
+      .when('/movies', {
         templateUrl: 'partials/movies.html',
         controller: 'MovieCtrl'
       })

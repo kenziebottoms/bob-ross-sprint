@@ -34,7 +34,7 @@ angular.module('bobross').controller('LoginCtrl', function ($scope, $http, $loca
         .then(response => {
           if (response.status == 200) {
             $scope.error = null;
-            $location.path('/');
+            $location.path('/movies');
           } else {
             $scope.error = response.message;
           }
