@@ -12,8 +12,8 @@ As a single-page app, Angular handles the client-side routing, while NodeJS hand
 | ---- | ------ | ------ |
 | `/movies/search/:q` | `GET` | Search movies for `q` |
 | `/login` | `POST` | Login |
-| `/register` | `POST` | register |
-| `/logout` | `POST` | logout |
+| `/register` | `POST` | Register |
+| `/logout` | `POST` | Logout |
 
 ### Angular Routes
 
