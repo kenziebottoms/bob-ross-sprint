@@ -1,10 +1,11 @@
-<div id='movies'>
-  <h2>Movies</h2>
-  <h4>Search results for '{{search}}'</h4>
-  <div class='row my-3'>
-    <div ng-repeat='movie in movies' class='movie col col-lg-3 my-2'>
-      <img src="{{movie.poster}}" class='mb-3'>
-      <h4>{{movie.title}}</h4>
+<h2>Movies</h2>
+<h4>Search results for '{{search}}'</h4>
+<div id='movies' class='my-3'>
+  <div ng-repeat='movie in movies' class='card movie bb'>
+    <img src="{{movie.poster}}" class='card-img-top mx-0 bb'>
+    <div class='card-body'>
+      <h5 class='card-title'>{{movie.title}}</h5>
+      <h6 class="card-subtitle text-muted">{{movie.year}}</h6>
     </div>
   </div>
 </div>
