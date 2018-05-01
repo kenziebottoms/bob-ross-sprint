@@ -3,7 +3,7 @@
 angular.module('bobross').factory('MovieFactory', function ($q, $http) {
   return {
     searchMovies(q) {
-      return $http.get(`/movies/${q}`);
+      return $http.get(`/movies/search/${q}`);
     }
   };
 });

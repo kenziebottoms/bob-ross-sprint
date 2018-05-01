@@ -6,11 +6,11 @@ This app brings together 6 months of web development training for NSS Cohort 23 
 
 As a single-page app, Angular handles the client-side routing, while NodeJS handles interactions with the API, as well as communication with the database.
 
-### API Endpoints
+### Node Routes
 
 | Path | Method | Result |
 | ---- | ------ | ------ |
-| `/movies/:q` | `GET` | Search movies for `q` |
+| `/movies/search/:q` | `GET` | Search movies for `q` |
 
 ### Angular Routes
 
