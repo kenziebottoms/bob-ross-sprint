@@ -4,7 +4,7 @@
   "description": "This app brings together 6 months of web development training for NSS Cohort 23 in one place. It allows a user to search a movie API to create a watch list of films and rank them after viewing.",
   "main": "server.js",
   "scripts": {
-    "create-db": "node create-db.js",
+    "db:gen": "node server/createDb.js",
     "sass": "node-sass client/sass/ -o client/css/",
     "lint": "eslint --color **/*.js --ignore-pattern node_modules/",
     "dev": "concurrently \"nodemon server.js\" \"rerun-script\""

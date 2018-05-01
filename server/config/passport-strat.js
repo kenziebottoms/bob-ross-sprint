@@ -5,6 +5,8 @@ const bCrypt = require("bcrypt-nodejs");
 const passport = require("passport");
 
 const { Strategy } = require("passport-local");
+const { generateHash } = require('../ctrl/authC');
+
 let User = null;
 
 const RegistrationStrategy = new Strategy(
@@ -18,14 +20,6 @@ const RegistrationStrategy = new Strategy(
   (req, email, password, done) => {
     console.log("local strat reg callback: password", password);
     User = req.app.get("models").User;
-
-    // add our hashed password generating function inside the callback function
-    const generateHash = password => {
-      let hashedWord = bCrypt.hashSync(password, bCrypt.genSaltSync(8));
-      console.log('hashedWord', hashedWord);
-
-      return hashedWord;
-    };
 
     User.findOne({
       where: { email } // remember, this is object literal shorthand. Same as { email: email}

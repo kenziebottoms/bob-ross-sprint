@@ -1,5 +1,6 @@
 'use strict';
 const passport = require('passport');
+const bCrypt = require('bcrypt-nodejs');
 
 module.exports.register = (req, res, next) => {
   // if (req.body.password === req.body.confirmation) { // move to client validation
@@ -50,8 +51,17 @@ module.exports.login = (req, res, next) => {
 
 // logging out
 module.exports.logout = (req, res, next) => {
-  req.session.destroy(function(err) {
+  req.session.destroy(function (err) {
     if (err) return next(err);
     res.status(200).end();
   });
+};
+
+
+// add our hashed password generating function inside the callback function
+module.exports.generateHash = password => {
+  let hashedWord = bCrypt.hashSync(password, bCrypt.genSaltSync(8));
+  console.log('hashedWord', hashedWord);
+
+  return hashedWord;
 };
