@@ -9,7 +9,7 @@ angular.module('bobross', ['ngRoute'])
       })
       .when('/register', {
         templateUrl: 'partials/register.html',
-        controller: 'RegisterCtrl'
+        controller: 'LoginCtrl'
       })
       .when('/login', {
         templateUrl: 'partials/login.html',

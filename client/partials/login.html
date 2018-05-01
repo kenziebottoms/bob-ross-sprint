@@ -7,11 +7,14 @@
   </div>
   <div class='row'>
     <div class='col-12 col-md-6 mb-3'>
-      <input type='password' class='form-control' ng-model='password1' id='password1' placeholder='Password'>
+      <input type='password' class='form-control' ng-model='password' id='password' placeholder='Password'>
     </div>
     <div class='col-12 col-md-6 mb-3'>
-      <input type='password' class='form-control' id='password2' ng-model='password2' placeholder='Password again, please'>
+      <input type='password' class='form-control' id='confirmation' ng-model='confirmation' placeholder='Password again, please'>
     </div>
   </div>
-  <button type='submit' class='btn btn-primary btn-block mx-auto'>Submit</button>
+  <div ng-show='error' class="alert alert-danger" role="alert">
+    {{error}}
+  </div>
+  <button type='submit' ng-click='login()' class='btn btn-primary btn-block mx-auto'>Submit</button>
 </div>

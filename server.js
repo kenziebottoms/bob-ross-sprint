@@ -3,6 +3,8 @@
 const express = require("express");
 const app = express();
 
+app.set("models", require('./server/models'));
+
 // static routes
 app.use(express.static(__dirname + "/client"));
 app.use('/angular', express.static(__dirname + '/node_modules/angular'));

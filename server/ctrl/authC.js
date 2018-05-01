@@ -3,8 +3,6 @@ const passport = require('passport');
 const bCrypt = require('bcrypt-nodejs');
 
 module.exports.register = (req, res, next) => {
-  // if (req.body.password === req.body.confirmation) { // move to client validation
-
   // first argument is name of the passport strategy we created in passport-strat.js
   passport.authenticate('local-signup', (err, user, msgObj) => {
     // console.log('Where are we? session.js', user);

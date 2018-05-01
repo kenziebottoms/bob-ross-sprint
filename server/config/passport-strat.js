@@ -47,9 +47,9 @@ const RegistrationStrategy = new Strategy(
           if (newUser) {
             return done(null, newUser);
           }
-        });
+        }).catch(err => console.log(err));
       }
-    });
+    }).catch(err => console.log(err));
   }
 );
 
